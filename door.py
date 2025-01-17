@@ -9,20 +9,20 @@ class State(ABC):
 
 class OpenedState(State):
     def open(self, door):
-        print("The door is already open.")
+        print("Дверь уже открыта.")
 
     def close(self, door):
-        print("Closing the door...")
+        print("Закрываю дверь...")
         door.change_state(ClosedState())
 
 
 class ClosedState(State):
     def open(self, door):
-        print("Opening the door...")
+        print("Открываю дверь...")
         door.change_state(OpenedState())
 
     def close(self, door):
-        print("The door is already closed.")
+        print("Дверь уже закрыта.")
 
 
 class Door:
