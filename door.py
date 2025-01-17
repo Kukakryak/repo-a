@@ -1,12 +1,8 @@
-from abc import ABC, abstractmethod
-
 
 class State(ABC):
-    @abstractmethod
     def open(self, door):
         raise NotImplementedError()
 
-    @abstractmethod
     def close(self, door):
         raise NotImplementedError()
 
